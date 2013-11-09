@@ -53,6 +53,6 @@ exports.setMatcher = (newMatcher)->
 
 exports.listen = (req, res, next)->
   if req.headers['user-agent'].match(matcher) isnt null
-    requestPage "#{req.protocol}://#{req.host}#{req.host}", res
+    requestPage "#{req.protocol}://#{req.host}#{req.path}", res
   else
     next()

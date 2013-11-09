@@ -83,7 +83,7 @@
 
   exports.listen = function(req, res, next) {
     if (req.headers['user-agent'].match(matcher) !== null) {
-      return requestPage("" + req.protocol + "://" + req.host + req.host, res);
+      return requestPage("" + req.protocol + "://" + req.host + req.path, res);
     } else {
       return next();
     }
