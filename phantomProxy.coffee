@@ -2,7 +2,7 @@ redis = require('redis')
 client = redis.createClient()
 phantom = require('node-phantom')
 
-macther = /(googlebot|bingbot|baiduspider|slurp|bingpreview|msnbot)/gi
+matcher = /(googlebot|bingbot|baiduspider|slurp|bingpreview|msnbot)/gi
 
 # Redis
 client.on 'ready', ->
